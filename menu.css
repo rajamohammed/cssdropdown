@@ -1,0 +1,165 @@
+/*
+	Title : Css Responsive dropdown script
+	Author : Raja Mohammed
+	Author url : www.cthreelabs.com
+	Git repo : https://github.com/rajamohammed/cssdropdown
+	
+*/
+
+ 
+.navmenu{
+	background-color: #3a3a3a;
+}
+.navmenu ul{
+	list-style: none;
+}
+.navmenu > ul > li{
+	display: inline-block;
+}
+.navmenu > ul > li a{
+	 
+	text-decoration: none;
+	color: white
+	
+}
+ul.menubar li a:hover{
+	text-decoration: underline;
+}
+ul.menubar > li{
+  position: relative;
+  padding: 8px;
+}
+ul.menubar  ul {
+	display: none;
+}
+ul.menubar li ul{
+  display: none;
+  position: absolute;
+  background-color: #1B1E24;
+  list-style: none;
+  margin:0;
+  padding:0px 0px 0px 10px;
+  min-width:180px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+ul.menubar >li.menus:hover{
+  background: #1B1E24;
+}
+
+ul.menubar > li:hover >ul{
+  display: block;
+  margin-left:-8px;
+ 
+}
+
+ul.menubar >li >ul >li:hover >ul,
+ul.menubar >li >ul >li:hover >ul >li:hover >ul{
+  display:block;
+}
+
+ul.menubar > li ul >li{
+  min-height: 30px;
+  padding: 5px 0px 5px 0px;
+  border-top: 1px solid #111;
+}
+
+ul.menubar > li ul >li:hover >ul {
+  margin-top:-24px;
+  left:190px;
+}
+
+ul.menubar >li.has-child:after {
+   color: white;
+   content: ' \25bc';
+   font-size: 12px;
+}
+
+ul.menubar li ul li.has-child:after {
+	color: white;
+   content: ' \25BA';
+   font-size: 10px;
+   float: right;
+   margin-right:5px;
+}
+
+
+/*For Device Below 980 px*/
+@media only screen and (max-width : 981px){
+	.mobile-logo img{
+		vertical-align: middle;		
+	}
+	.mobile-logo h3{
+		margin-top: 0px;
+		
+	}
+ 	/*Menu*/
+	.mobile-menu{
+		margin: 5px;
+	 }
+	 
+	.navmenu {
+		/* position: fixed; */
+		top: 60px;
+	}
+	
+	.navmenu >ul{
+	  display: none;
+	}
+	
+	.sm-menu,.navmenu{
+	  width:100%;
+	  z-index:999999;
+	}
+	.sm-menu{
+	   
+	  width:100% !important;
+	  background-color: #1B1E24;
+	  list-style: none;
+	  margin:0;padding:10px;
+	  margin-top:0px;
+	  left:0;
+	  right:0;
+	  
+	  
+	}
+	.sm-menu li{
+	   
+	  width:100%;
+	  text-align: left;
+	  
+	  position: static;
+	}
+	.sm-menu li a,.sm-menu li form{
+		display: block;
+		padding:15px;
+		border-bottom: 1px solid #111; 
+	}
+	
+	/*
+ul.sm-menu li:hover ul{
+	  display: block;
+	} 
+*/
+	ul.sm-menu li ul{
+	  position: static;
+	  display: none;
+	  list-style: none;
+	  padding-left: 0;
+	  padding-left: 2%;
+	}
+	
+	ul.sm-menu li ul li a:before {
+		content: "\203A ";
+		color: white;	
+	}
+	
+	ul.sm-menu li.has-child >a:after {
+	   color: white;
+	   content: ' \25bc';
+	   font-size: 10px;
+	}
+	
+
+}
