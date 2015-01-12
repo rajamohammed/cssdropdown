@@ -1,0 +1,65 @@
+<!--
+	Title : Css Responsive dropdown script
+	Author : Raja Mohammed
+	Author url : www.cthreelabs.com
+	Git repo : https://github.com/rajamohammed/cssdropdown
+	
+-->
+<!DOCTYPE>
+<html>
+<title>Css dropdown</title>
+<head>
+
+</head>
+<body>
+<div class="navmenu">
+					<ul class="list-inline menubar">
+						<li class="menus"> <a href="Javascript:void(0);">Menu </a> 
+							<ul>
+								<li><a href="#"> Submenu 1 </a></li>
+								<li><a href="Javascript:void(0);"> Submenu 2 </a>
+									<ul>
+										<li><a href="#"> Submenu 1a </a></li>
+										<li><a href="#"> Submenu 2a </a></li>
+										<li><a href="#"> Submenu 3a </a></li>
+									</ul>
+								</li>
+								<li><a href="#"> Submenu 3 </a></li>
+							</ul>
+						</li>
+						<li class="menus"> <a href="Javascript:void(0);">Menu2</a> 
+							<ul>
+								<li><a href="Javascript:void(0);"> Submenu class </a>
+									<ul>
+										<li><a href="#"> Submenu class 1 </a></li>
+										<li><a href="#"> Submenu class 2 </a></li>
+										<li><a href="#"> Submenu class 3 </a></li>
+									</ul>
+
+								</li>
+								<li><a href="Javascript:void(0);"> Submenu test </a>
+									<ul>
+										<li><a href="#"> Submenu test 1 </a></li>
+										<li><a href="#"> Submenu test 2 </a></li>
+										<li><a href="Javascript:void(0);"> Submenu test 3 </a>
+											<ul>
+												<li><a href="#"> Submenu test 1 </a></li>
+												<li><a href="#"> Submenu test 2 </a></li>
+												<li><a href="#"> Submenu test 3 </a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="#"> Submenu 3 </a></li>
+							</ul>
+						</li>
+						<li class="menus"> <a href="#">Menu3</a> </li>
+						
+					</ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>/*Add Caret to Dropdown and submenu */
+		$('ul.menubar li:has(ul), ul.sm-menu li:has(ul)').addClass('has-child');
+</script>
+</body>
+</html>
